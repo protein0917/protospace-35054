@@ -1,7 +1,7 @@
 class PrototypesController < ApplicationController
 
   before_action :authenticate_user!, except: [:new, :create, :edit, :update, :destroy]
-
+  before_action :move_to_index, except: [:index]
 
 
   def index
